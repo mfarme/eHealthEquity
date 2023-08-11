@@ -6,7 +6,7 @@ Research Notebooks, Data Sources, and Geospatial Tool Development of eHealthEqui
 
 ## Aim
 Assess and analyze quantifiable evidence that Internet access and adoption is a social determinant of health in United States counties and describe the interaction effects between other social determinants.
-
+- Why publish on Github? To promote replication with different or new data, grow research in this domain, and do science in the open. 
 
 
 ### Research Question 1 
