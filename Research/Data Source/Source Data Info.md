@@ -19,4 +19,6 @@ Confidence intervals can be calculated by subtracting the MOE from the estimate 
 MOE to the estimate (upper limit). Because of relatively small sample sizes, some of the MOEs are high. It is 
 important to identify the amount of error acceptable in any analysis.
 
+[Calculate MOE - Youtube] (https://www.youtube.com/watch?v=nM2RZJag320)
+
 [API Docs](https://www.census.gov/data/developers/data-sets/acs-5year.html)
