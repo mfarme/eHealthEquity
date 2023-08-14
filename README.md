@@ -1,4 +1,5 @@
 # eHealthEquity
+## Work in Progress (Active Research)
 Research Notebooks, Data Sources, and Geospatial Tool Development of eHealthEquity research.
 
 *Dissertation Research of Matthew Farmer MSN, RN
