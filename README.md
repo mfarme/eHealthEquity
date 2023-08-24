@@ -23,7 +23,9 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 * [Numpy](https://numpy.org/)
 * [cenususdis](https://github.com/vengroff/censusdis/tree/main)
 * [sodapy](https://github.com/xmunoz/sodapy)
-* [add more as notebooks develop]
+* [scipy](https://www.scipy.org/)
+* [matplotlib](https://matplotlib.org/)
+* [seaborn](https://seaborn.pydata.org/)
 
 ## Data Sources and Variables
 | Variables  | Level        | Concept                                       | Measure                                                                                       | Source               | Note                                                                        |
