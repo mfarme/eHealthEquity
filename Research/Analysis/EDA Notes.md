@@ -11,54 +11,94 @@ BRFSS Data were limited to age-adjusted prevelence estimates for all features.
 ## Data Exploration
 Data type: all data were numeric except for the state and county names. The state and county names were object data types.
 
-Data Shape: the number of counties (including large individual cities) assessed was 3,076. This excludes Florida and Puerto Rico. Florida did not have data for BRFSS 2021, and PR was excluded in the study. The number of total features (including CI) was 136. Without CI, the number of features is 46. Poverty did not have CI. 
+Data Shape: the number of counties (including large individual cities) assessed was 3,076. This excludes Florida and Puerto Rico. Florida did not have data for BRFSS 2021, and PR was excluded in the study. The number of total features was 40.
 
-Missing Values: Missing values were identified in Upper and Lower CI columns. Ethicity-Hispanic had the highest amount of missing CI values (2620). Age greater than 65, and male/female features were the other feautres with missing CI values, with 90 and 13 missing values respectively.
+Missing Values: none of the features had missing values.
 
 Descriptive Statistics by feature:
-- BRFSS Access (Uninsured): Mean 0.12, std 0.06, skew 2.11, kurt 6.62. ****Not normally distributed****, high peaks and right skew.
-- BRFSS Checkup w/ Doctor: mean 0.72, std 0.04, skew -0.77, kurt 0.37. Appears normally distributed.
-- BRFSS Current Smoking: Mean 0.19, std 0.04, skew 0.47, kurt 1.43. Appears normally distributed. 
-- BRFSS Depression: Mean 0.23, std 0.03, skew 0.01, kurt = -0.1. Appears normally distributed.
-- BRFSS Diabetes: Mean 0.11, std 0.02, skew = 1.04, kurt = 1.68. Appears normally distributed with a slight right skew.
-- BRFSS General Health(poor): Mean 0.18, std 0.05, skew 0.75, kurt 0.46. Appears normally distributed. 
-- BRFSS Mental Health(poor): Mean 0.17, std 0.02, skew 0.08, kurt -0.17. Appears normally distributed.
-- BRFSS Obesity: mean 0.37, std 0.05, skew -0.60, kurt 1.11. Appears normally distributed.
-- ACS Poverty: mean 0.14, std 0.06, skew 1.20, kurt 3.04. Appears normally distributed with peakedness.
-- ACS Age > 65: mean 0.19, std 0.05, skew 0.60, kurt 1.11. Appears normally distributed. 
-- ACS Race White: mean 0.81, std 0.17, skew -1.50, kurt 2.10. **Not normal distribution**. Left skew and peaked. 
-- ACS Race Black: mean 0.09, std 0.14, skew 2.35, kurt 5.50. ****Not normally distributed****, right skew and highly peaked. 
-- ACS Race American Indian, Alaskan Native: mean 0.02, std 0.08, skew 7.69, kurt 66.56. **Not normally distributed**, right skew and significantly peaked.
-- ACS Race Asian: mean 0.01, std 0.03, skew 6.81, kurt 65.90. **Not normally distributed**, right skew with significant peak. 
-- ACS Race Native Hawaiian and Other Pacific Islander: mean 0.00, std 0.01, skew 20.46, kurt 505.81. **Not normally distributed**, heavily right skewed with significant peak.
-- ACS Race other: mean 0.02, std 0.04, skew 4.87, kurt 34.94. Not normally distrbuted, skewed right and significantly peaked. 
-- ACS Ethnicity Hispanic: mean 0.10, std 0.14, skew 3.06, kurt 10.72. **Not normally distributed**, skewed right, hihgly peaked. 
-- ACS Health Insurance (uninsured): mean 0.09, std 0.05, skew 1.61, kurt 4.59. Appears normally distributed with right skew and peakedness.
-- ACS Sex Male: mean 0.50, std 0.02, skew 2.50, kurt 11.36. Normal distribution with slight right skew and highly peaked. 
-- ACS Sex Female: mean 0.50, std 0.02, skew -2.50, kurt 11.36. Normal distribution with slight left skew and highly peaked.
-- ACS Education (Less than 9th Grade): mean 0.04, std 0.03, skew 3.69, kurt 29.44. Distribution is somewhat normal with right skew but high peakedness.
-- ACS Education (9-12th): Mean 0.08, std 0.03, skew 0.95, kurt 1.65. Appears normally distributed.
-- ACS Education High School: mean 0.34, 0.08, skew -0.28, kurt 0.00. Appears normally distributed.
-ACS Education Some College: mean 0.22, std 0.04, skew 0.18, kurt 0.70. Appears normally distributed.
-- ACS Education Associates's Degree: mean 0.10, std 0.03, skew 1.17, kurt 9.79. Appears normally distributed with peak.
-- ACS Education Bachelor's Degree: mean 0.15, std 0.06, skew 0.95, kurt 1.15. Appears normally distributed.
-- ACS Eduacation Graduate Degree: mean 0.08, std 0.05, skew 2.12, kurt 7.32. Appears normally distributed with right skew and peak.
-- ACS Occupation Unemployed: mean 0.06, std 0.03, skew 2.96, kurt 22.15. Appears normally distributed with right skew and peak.
-- ACS Occupation Management: mean 0.34, std 0.07, skew 0.92, kurt 1.73. Appears normally distributed.
-- ACS Occupation Service: mean 0.18, std 0.04, skew 0.85, kurt 2.48. Appears normally distributed.
-- ACS Occupation Sales: mean 0.20, std 0.03, skew -0.46, kurt 2.32. Appears normally distributed.
-- ACS Occupation Natural Resources: mean 0.12, std 0.04, skew 1.09, kurt 3.42. Appears normally distributed with small peak.
-- ACS Occupation Production: mean 0.17, std 0.06, skew 0.40, kurt 0.02. Appears normally distributed.
-- ACS Transportation 0 vehicles: mean 0.06, std 0.05, skew 7.58, kurt 97.12. **Not normally distributed**, right skew and highly peaked.
-- ACS Transportation 1 vehicle: mean 0.29, std 0.06, skew 0.22, kurt 2.21. Appears normally distributed.
-- ACS Transportation 2 vehicles: mean 0.37, std 0.05, skew -0.95, kurt 5.96. Appears normally distributed.
-- ACS Transportation 3 vehicles: mean 0.28, std 0.08, skew 0.36, kurt 1.08. Appears normally distributed.
-- ACS Broadband Internet Subscription: mean 0.80, std 0.08, skew -1.02, kurt 1.82. Appears normally distributed.
+| Feature                   | Mean      | Std       | Skew     | Kurt     | Normally Distributed |
+|---------------------------|-----------|-----------|----------|----------|-----------------------|
+| brfss_access2_ageadjprv   | 12.257965 | 5.642848  | 2.107293 | 6.632905 | **No**                    |
+| brfss_checkup_ageadjprv    | 72.327796 | 4.455203  | -0.768270| 0.375633 | Yes                    |
+| brfss_csmoking_ageadjprv   | 19.000260 | 4.080862  | 0.474461 | 1.431582 | Yes                    |
+| brfss_depression_ageadjprv | 23.043173 | 3.283014  | 0.007416 | -0.097413| Yes                   |
+| brfss_diabetes_ageadjprv   | 10.566775 | 2.261324  | 1.039886 | 1.685440 | Yes                    |
+| brfss_ghlth_ageadjprv      | 17.723927 | 4.563984  | 0.748941 | 0.463330 | Yes                    |
+| brfss_mhlth_ageadjprv      | 17.146261 | 2.128703  | 0.083138 | -0.163402| Yes                   |
+| brfss_obesity_ageadjprv    | 37.422172 | 4.545114  | -0.602845| 1.110271 | Yes                    || pct_ed_lt9                 | 4.424447  | 3.466028  | 3.690470 | 29.472990| **No**                    |
+| pct_ed_9_12                | 7.593596  | 3.446065  | 0.947911 | 1.659929 | Yes                  |
+| pct_ed_hs                  | 33.964564 | 7.513747  | -0.282498| 0.004606 | Yes                   |
+| pct_ed_sc                  | 21.509363 | 3.913367  | 0.178423 | 0.709722 | Yes                   |
+| pct_ed_asc                 | 9.503674  | 2.962155  | 1.174695 | 9.827137 | Yes                   |
+| pct_ed_b                   | 14.848895 | 5.826326  | 0.950158 | 1.148679 | Yes                   |
+| pct_ed_gr                  | 8.155039  | 4.715969  | 2.122896 | 7.336016 | **No**                     |
+| pct_age_gte65              | 19.137386 | 4.629210  | 0.605006 | 1.110419 | Yes                   |
+| pct_race_white             | 80.523960 | 17.189236 | -1.505021| 2.103693 | **No**                     |
+| pct_race_black             | 8.825975  | 14.450013 | 2.349037 | 5.504620 | **No**                    |
+| pct_race_aian              | 1.982055  | 7.912436  | 7.696848 | 66.658238| **No**                    |
+| pct_race_asian             | 1.419018  | 2.931693  | 6.809628 | 65.935254| **No**                    |
+| pct_race_nhopi             | 0.099740  | 0.537195  | 20.417653| 505.682630| **No**                    |
+| pct_race_other             | 2.433453  | 3.969916  | 4.873134 | 35.043984| **No**                    |
+| pct_eth_hisp               | 9.681307  | 14.016291 | 3.057726 | 10.738296| **No**                    |
+| pct_sex_male               | 50.343108 | 2.396472  | 2.497769 | 11.367276| **No**                    |
+| pct_sex_female             | 49.656892 | 2.396472  | -2.497769| 11.367276| **No**                   |
+| pct_occ_unemp              | 2.954356  | 1.378524  | 2.202239 | 16.626870| Yes                   |
+| pct_occ_mgt                | 33.597269 | 7.149974  | 0.924736 | 1.731558 | Yes                   |
+| pct_occ_svc                | 17.534200 | 3.732485  | 0.848384 | 2.488990 | Yes                   |
+| pct_occ_sales              | 19.596196 | 3.020731  | -0.465568| 2.321047 | Yes                   |
+| pct_occ_nat_res            | 12.379681 | 4.179799  | 1.088463 | 3.418339 | Yes                   |
+| pct_occ_prod               | 16.893433 | 5.916437  | 0.398288 | 0.025463 | Yes                   |
+| pct_hlth_unins             | 9.608127  | 5.150514  | 1.547119 | 4.177119 | **No**                     |
+| pct_ses_pov                | 14.401658 | 6.152201  | 1.196015 | 3.043360 | Yes                   |
+| pct_tp_veh_0               | 6.078316  | 4.511482  | 7.584077 | 97.263805| **No**                     |
+| pct_tp_veh_1               | 29.101398 | 5.722047  | 0.219941 | 2.213234 | Yes                   |
+| pct_tp_veh_2               | 36.813687 | 4.610280  | -0.954653| 5.971907 | Yes                   |
+| pct_tp_veh_3               | 28.003706 | 7.584240  | 0.365086 | 1.088335 | Yes                   |
+| pct_dg_bb_int              | 80.485826 | 7.894527  | -1.021739| 1.831595 | Yes                   |
 
 ## Univariate Analysis
 ### Correlation (top and bottom 10)
-
-![Alt text](image.png)
+![Alt text](image-3.png)
+|      feature1     |         feature2        | correlation |
+|-------------------|-------------------------|-------------|
+|   pct_eth_hisp    |     pct_race_other      |   0.682311  |
+| brfss_obesity_ageadjprv | brfss_diabetes_ageadjprv |   0.683073  |
+| brfss_mhlth_ageadjprv |      pct_ses_pov        |   0.688144  |
+| brfss_csmoking_ageadjprv | brfss_obesity_ageadjprv |   0.692554  |
+| brfss_csmoking_ageadjprv |      pct_ses_pov        |   0.710255  |
+|      pct_ed_hs     | brfss_csmoking_ageadjprv |   0.713761  |
+| brfss_access2_ageadjprv |    pct_hlth_unins      |   0.730730  |
+| brfss_depression_ageadjprv | brfss_mhlth_ageadjprv |   0.735761  |
+|    pct_occ_mgt    |        pct_ed_gr         |   0.756401  |
+|      pct_ed_b      |        pct_ed_gr         |   0.764301  |
+| brfss_csmoking_ageadjprv | brfss_ghlth_ageadjprv |   0.769268  |
+|   pct_ed_9_12     | brfss_diabetes_ageadjprv |   0.776313  |
+|    pct_occ_mgt    |         pct_ed_b         |   0.777645  |
+| brfss_ghlth_ageadjprv | brfss_mhlth_ageadjprv |   0.812276  |
+| brfss_csmoking_ageadjprv | brfss_mhlth_ageadjprv |   0.813041  |
+|   pct_ed_9_12     | brfss_ghlth_ageadjprv |   0.820532  |
+| brfss_diabetes_ageadjprv |      pct_ses_pov        |   0.824549  |
+|    pct_ses_pov    | brfss_ghlth_ageadjprv |   0.827998  |
+| brfss_diabetes_ageadjprv | brfss_ghlth_ageadjprv |   0.927572  |
+|   pct_sex_male    |    pct_sex_female       |  -1.000000  |
+|  pct_tp_veh_3     |     pct_tp_veh_1       |  -0.807292  |
+|      pct_ed_b      | brfss_csmoking_ageadjprv |  -0.771570  |
+|      pct_ed_b      |       pct_ed_hs         |  -0.770391  |
+| pct_race_black    |    pct_race_white       |  -0.757329  |
+|      pct_ed_b      | brfss_ghlth_ageadjprv |  -0.704377  |
+|     pct_ed_hs     |         pct_ed_gr         |  -0.701566  |
+|   pct_ed_9_12     |         pct_ed_b         |  -0.689861  |
+| brfss_mhlth_ageadjprv |        pct_ed_b         |  -0.689738  |
+|  pct_occ_prod     |      pct_occ_mgt        |  -0.670625  |
+|      pct_ed_b      | brfss_obesity_ageadjprv |  -0.662791  |
+| pct_dg_bb_int     | brfss_ghlth_ageadjprv |  -0.662506  |
+|  pct_occ_mgt     |         pct_ed_hs         |  -0.655527  |
+| pct_dg_bb_int     | brfss_csmoking_ageadjprv |  -0.653152  |
+| brfss_diabetes_ageadjprv |    pct_race_white      |  -0.640247  |
+| brfss_diabetes_ageadjprv |      pct_dg_bb_int     |  -0.620441  |
+|    pct_ses_pov    |      pct_dg_bb_int     |  -0.606104  |
+| brfss_csmoking_ageadjprv |       pct_ed_gr        |  -0.599543  |
+|   pct_ed_9_12     |      pct_dg_bb_int     |  -0.598564  |
 
 # Discussion
 
@@ -67,11 +107,13 @@ Negative correlations with bach degree and smoking, general health, mental healt
 - Education has high correlations with health, occupation, adn poverty. 
 - Poverty has high correlations with health, occupation, and education.
 - These are complex and multi-faceted relationships. Will need to address these complexities in analysis.
+- Diabetes prevalence is highly correlated with general health. Due to the linear relationship, RQ 2 will be dropped. 
 
-- Non Normal Distributions: BRFSS Access (Uninsured), All race and ethnicity variables, and 0 vehicles variable. 
-
-## Data Visualization
-![
-](image-1.png)
-
-![Top correlations plotted on graph diagram](image-2.png)
+## Other Data Visualization
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+![Alt text](image-9.png)
+![Alt text](image-10.png)
