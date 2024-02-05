@@ -12,9 +12,7 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 
 ### Research Question 1 
 - What is the relationship between Internet adoption and diabetes prevalence in United States counties, controlling for other social determinants of health?
-### Research Question 2 
-- What is the relationship between Internet adoption and fair or poor self-report health status ratings in United States counties, controlling for other social determinants of health? 
-### Research Question 3
+### Research Question 2
 - Do machine learning algorithms produce a better fit (lower variance and bias) compared to linear regression models? 
 
 ---
@@ -26,7 +24,11 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 * [scipy](https://www.scipy.org/)
 * [matplotlib](https://matplotlib.org/)
 * [seaborn](https://seaborn.pydata.org/)
-* [NetworkX](https://networkx.org/)
+* [geopandas](https://geopandas.org/)
+* [shapely](https://shapely.readthedocs.io/en/stable/)
+* [SciPy](https://www.scipy.org/)
+* [scikit-learn](https://scikit-learn.org/stable/)
+* [statsmodels](https://www.statsmodels.org/stable/index.html)
 
 ## Data Sources and Variables
 | Variables  | Level        | Concept                                       | Measure                                                                                       | Source               | Note                                                                        |
@@ -48,9 +50,7 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 * [BRFSS/PLACES](https://www.cdc.gov/brfss/brfssprevalence/index.html)
     * [BRFSS/PLACES API](https://dev.socrata.com/foundry/data.cdc.gov/4qvr-3h4f)
 * [NTIA](https://www.ntia.gov/data/broadband-data)
-    *  [NTIA API](https://www.ntia.gov/data/broadband-data/api)
 * [RUCA Codes](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx)
 
 ## Conceptual Framework
 * [WHO Social Determinants of Health Framework](https://www.who.int/teams/social-determinants-of-health)
-![Alt text](image.png)
