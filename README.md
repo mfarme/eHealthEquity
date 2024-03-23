@@ -29,6 +29,12 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 * [SciPy](https://www.scipy.org/)
 * [scikit-learn](https://scikit-learn.org/stable/)
 * [statsmodels](https://www.statsmodels.org/stable/index.html)
+* [plotly](https://plotly.com/python/)
+* [os](https://docs.python.org/3/library/os.html)
+* [json](https://docs.python.org/3/library/json.html)
+* [urllib](https://docs.python.org/3/library/urllib.html)
+
+
 
 ## Data Sources and Variables
 | Variables  | Level        | Concept                                       | Measure                                                                                       | Source               | Note                                                                        |
