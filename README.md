@@ -1,6 +1,6 @@
 # eHealthEquity
-## Work in Progress (Active Research)
-Research Notebooks, Data Sources, and Geospatial Tool Development of eHealthEquity research.
+## Active Research
+Research Notebooks, Data Sources, and outputs of eHealthEquity research.
 
 *Dissertation Research of Matthew Farmer MSN, RN
  University of Missouri, Sinclair School of Nursing* [@mfarme](https://github.com/mfarme/mfarme)
@@ -11,7 +11,7 @@ Assess and analyze quantifiable evidence that Internet access and adoption is a 
 
 
 ### Research Question 1 
-- What is the relationship between Internet adoption and diabetes prevalence in United States counties, controlling for other social determinants of health?
+- What is the relationship between Internet adoption and self-reported diabetes prevalence in United States counties, controlling for other social determinants of health?
 ### Research Question 2
 - Do machine learning algorithms produce a better fit (lower variance and bias) compared to linear regression models? 
 
