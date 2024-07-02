@@ -2,7 +2,7 @@
 ## Active Research
 Research Notebooks, Data Sources, and outputs of eHealthEquity research.
 
-*Dissertation Research of Matthew Farmer MSN, RN
+*Dissertation Research of Matthew Farmer PhD, RN
  University of Missouri, Sinclair School of Nursing* [@mfarme](https://github.com/mfarme/mfarme)
 
 ## Aim
